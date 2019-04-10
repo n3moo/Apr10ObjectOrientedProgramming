@@ -1,0 +1,59 @@
+#include <iostream>
+
+struct Customer {
+private:
+    std::string name;
+    int id;
+    std::string cit;
+    int birthMonth;
+public:
+    Customer(){
+        name = "";
+        id = 0;
+        cit = "";
+        birthMonth = 0;
+    }
+
+    void print(){
+        std::cout << "Name: " << name << std::endl;
+        std::cout << "ID: " << id << std::endl;
+        std::cout << "City: " << cit << std::endl;
+        std::cout << "Birthday Month: " << birthMonth << std::endl;
+    }
+
+    void setName(std::string aName){
+        name = aName;
+    }
+};
+
+
+
+
+//pass by reference since we want to edit the data
+//constructor function
+//void initCustomer(Customer&);
+//void printCustomer(Customer aCustomer);
+
+
+
+int main() {
+
+    Customer theCustomer;
+    //initCustomer(theCustomer);
+
+    theCustomer.setName("Bob");
+    theCustomer.print();
+
+
+    return 0;
+}
+
+//void initCustomer(Customer& aCustomer){
+//    aCustomer.name = "John Doe";
+//    aCustomer.id = 1;
+//    aCustomer.cit = "Miami";
+//}
+
+
+
+
